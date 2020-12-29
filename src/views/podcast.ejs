@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= title1 %>
+    </title>
+    <%- include('partials/head.ejs') %>
+</head>
+
+<body>
+    <!--- Encabezado desde nav.ejs ---->
+    <%- include('partials/nav.ejs') %>
+        <div class="container">
+            <div id="glow" class="glow disable-animation">
+                <div id="player">
+                    <span class="text">My Podcast</span>
+                    <br>
+                    <span id="songName" class="text">Special New Year!!</span>
+                    <br>
+                    <div class="playback_controls">
+                        <audio id="audio">
+                            <source src="audio/newYear.mp3" type="audio/mp3">
+                        </audio>
+                        <button class="btn btn_live icon" id="button_play">Play<span class="live-icon"></span></button>
+
+                    </div>
+            
+
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="content_share">
+                <p>You can help me, sharing with your friends :D</p>
+                <button id="btn_share"><i class="fas fa-share-alt"></i></button>
+            </div>
+            
+        </div>
+        
+        <footer>
+            Pier Olivera 2021 | Todos los derechos reservados
+        </footer>
+
+        <script>
+            const btn_play = document.getElementById('button_play');
+            const audio = document.getElementById('audio');
+
+            btn_play.addEventListener("click", function () {
+                if (audio.paused) {
+                    audio.play();
+                    btn_play.innerHTML = 'Live';
+                    document.getElementById('glow').classList.remove('disable-animation');        
+                } else {
+                    audio.pause();
+                    btn_play.innerHTML = 'Play';
+                }
+            });
+
+            const btn_share = document.getElementById('btn_share');
+            
+            btn_share.addEventListener('click', function sharingg(){
+                navigator.share({
+                title: 'Podcast RufastoDev',
+                text: 'Lo mejor de la electronica, todos los fines de semana en vivo',
+                url: ''
+                })
+            });
+
+            
+        
+            
+            
+        </script>
+</body>
+
+</html>

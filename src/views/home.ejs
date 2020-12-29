@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Los Cangri Producciones">
+    <meta name="description" content="Radio en vivo de música electronica">
+    <meta name="keywords" content="livestream, radio, mixes, dj's">
+    <title><%= title %></title>
+    <%- include('partials/head.ejs') %>
+</head>
+
+<body>
+    <!--- Encabezado desde nav.ejs ---->
+    <%- include('partials/nav.ejs') %>
+    <div class="main-container" id="HomeTag">
+        <div class="grid-display">
+            <!---- Sub div 1----->
+            <div class="greeting-right">
+                <h2>Hi, Welcome to my personal website!!</h2>
+            </div>
+            <!------Sub div 2----->
+            <div class="card-left">
+                <div class="flex-main">
+
+                    <div class="img-container">
+                        <img src="img/me1.JPG" width="300px"/>
+                    </div>
+                    <p class="info full-name">Hann Pieer Rufasto</p>
+                    <p class="info role">
+                        <i class="fas fa-star"></i>
+                        Developer and Entrepreneur
+                    </p>
+                    <p class="info place">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Chiclayo, Perú
+                    </p>
+        
+                    <div class="posts-info">
+                        <p>I am an innovative person and eager to learn, I study International Business but at the same time
+                            I really liked the world of web development. Now I am a freelance developer</p>
+                    </div>
+        
+                    <div class="social-container">
+                        <a class="linkedin" href="https://www.linkedin.com/in/pierr-v%C3%A1squez-rufasto-3ab5911b9/">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="instagram" href="https://www.instagram.com/piervasquez08/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="github" href="https://github.com/RufastoDev">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+        
+                    <button class="action" onclick="window.open('file/CV2021.pdf')">Show resumen</button>
+                    <button class="action message">Message</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
