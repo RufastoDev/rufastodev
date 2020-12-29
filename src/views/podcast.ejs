@@ -27,7 +27,7 @@
                         <button class="btn btn_live icon" id="button_play">Play<span class="live-icon"></span></button>
 
                     </div>
-            
+
 
                 </div>
             </div>
@@ -37,12 +37,13 @@
                 <p>You can help me, sharing with your friends :D</p>
                 <button id="btn_share"><i class="fas fa-share-alt"></i></button>
             </div>
-            
+            <div class="footer">
+                <h4>Pier Olivera | Todos los derechos reservados</h4>
+            </div>
+
         </div>
+
         
-        <footer>
-            Pier Olivera 2021 | Todos los derechos reservados
-        </footer>
 
         <script>
             const btn_play = document.getElementById('button_play');
@@ -52,7 +53,7 @@
                 if (audio.paused) {
                     audio.play();
                     btn_play.innerHTML = 'Live';
-                    document.getElementById('glow').classList.remove('disable-animation');        
+                    document.getElementById('glow').classList.remove('disable-animation');
                 } else {
                     audio.pause();
                     btn_play.innerHTML = 'Play';
@@ -60,19 +61,32 @@
             });
 
             const btn_share = document.getElementById('btn_share');
-            
-            btn_share.addEventListener('click', function sharingg(){
-                navigator.share({
-                title: 'Podcast RufastoDev',
-                text: 'Lo mejor de la electronica, todos los fines de semana en vivo',
-                url: ''
-                })
-            });
 
-            
-        
-            
-            
+            btn_share.addEventListener('click', webShareAPI)
+            if ('share' in navigator) {
+                function webShareAPI() {
+                    navigator.share({
+                        title: 'Podcast RufastoDev',
+                        text: 'Lo mejor de la electronica, todos los fines de semana en vivo',
+                        url: 'https://rufastodev.herokuapp.com/podcast'
+                    })
+                        .then(() => {
+                            alert('Ya puedes compartir')
+                        })
+                        .catch(() => {
+                            alert('No se pudo compartir')
+                        })
+                }
+            }else{
+                alert('No está disponible Web Share API')
+            }
+
+
+
+
+
+
+
         </script>
 </body>
 

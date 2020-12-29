@@ -349,7 +349,7 @@ nav .icon-burger .line {
 
 .glow {
     position: absolute;
-    top: 42%;
+    top: 29%;
     width: 300px;
     height: 300px;
     background: linear-gradient(0deg, #111111, #262626);
@@ -523,11 +523,13 @@ div.body{
     display: grid;
     grid-template-rows: (2,1fr);
     place-items: center;
-    width: 100%;
+    width: 90%;
+    position: absolute;
+    top: 75%;
 
 }
 .body .content_share{
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 .body .content_share p{
@@ -547,27 +549,56 @@ div.body{
     color: black;
     font-size: 19px;
 }
-
-footer{
+div.body .footer{
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+}
+.footer{
+    font-size: 19px;
+    color: rgb(0, 0, 0,0.8);
     font-family: var(--fontFooter);
     padding: 2rem;
-    text-align: center;
-    line-height: 50px;
-    background-color: var(--primaryColor);
-    color: var(--text01);
-    position: absolute;
-    padding-top: -90px;
-    bottom: 0;
-    width: 95%;
-    height: 50px;
 }
+
 @media screen and (max-width: 374px) {
-    footer{
-        width: 100%;
+    div.body{
+        width: 96%;
+    }
+    .content_share {
+        width: 95%;
+    }
+    .footer {
+        width: 95%;
+    }
+    .card-left{
+        width: 96%;
+    }
+    .main-contanier {
+        width: 90%;
     }
 }
 @media screen and (max-width: 720px) {
-    footer{
+    div.body{
+        width: 96%;
+    }
+    .content_share {
+        width: 94%;
+    }
+    .footer {
+        width: 94%;
+    }
+
+    .card-left{
+        width: 96%;
+    }
+    .main-contanier {
         width: 95%;
     }
+}
+@media screen and (max-width: 920px) {
+    div.body {
+        width: 100%;
+    }
+
 }
