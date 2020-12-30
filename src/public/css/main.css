@@ -537,17 +537,23 @@ div.body{
     font-family: var(--normalFont);
     font-size: 20px;
 }
-.content_share button{
-    width: 120px;
-    height: 30px;
-    border-radius: 15px;
-    outline-style: none;
-    border-color: 5px solid black;
-    cursor: pointer;
+#btn_share{
+    width: 100px;
+    height: 45px;
+    border-radius: 8px;
+    background-color: var(--otherColor);
+    color: var(--primaryColor);
+    outline: none;
+    border: none;
+    text-align: center;
+    transition: transform 0.3s;
 }
-.body i{
-    color: black;
-    font-size: 19px;
+#btn_share i {
+    font-size: 22px;
+}
+#btn_share:hover {
+    background-color: var(--otherColor);
+    transform: scale(1.02);
 }
 div.body .footer{
     width: 90%;
